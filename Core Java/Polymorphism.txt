@@ -1,0 +1,25 @@
+AccountMenu
+	1. Savings
+	2. Current
+Select Account Type
+if AccountChoice is 1 
+	Do you want to open salary account ? Yes || No
+if AccountChoice is 2
+	Enter overdraft balance
+Accept account number, name, balance
+Create object of selected type.
+Account Created Successfully
+Print all details on console.
+Transaction Menu
+	1. Withdraw
+	2. Deposit
+	3. Check Balance
+		in case of current account print overdraft balance
+Do the transaction as per choice
+
+Do you want to continue Yes || No 
+
+Note : Use Polymorphism 
+
+
+	

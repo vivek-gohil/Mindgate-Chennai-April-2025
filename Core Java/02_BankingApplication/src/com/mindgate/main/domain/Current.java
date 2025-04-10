@@ -49,7 +49,7 @@ public class Current extends Account {
 				overdraftBalance = initialOverdraftBalance;
 				setBalance(getBalance() + amount);
 				return true;
-			}
+			} 
 		} else {
 			if (amount > 0) {
 				setBalance(getBalance() + amount);
