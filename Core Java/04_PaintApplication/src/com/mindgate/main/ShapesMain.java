@@ -30,7 +30,9 @@ public class ShapesMain {
 			}
 
 			if (shapes != null) {
+				
 				shapes.draw();
+				
 			}
 
 		} while (true);
