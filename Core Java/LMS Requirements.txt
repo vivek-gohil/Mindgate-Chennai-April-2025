@@ -1,0 +1,26 @@
+Create a List of Books - size 10  
+Create a List of Members - size 5
+Create a List of BookIssueDetails - size 0
+*****************************
+*************LMS*************
+*****************************
+Print All Books 
+Press 1 To Issue New Book
+Press 2 To Return a Book
+Press 3 To Display Issued Books
+Enter your choice
+if choice == 1
+	Enter Member Id
+	___
+	Display member name
+	Display member type
+	Enter Book Id 
+	___
+	Display Book Title
+	Display Book author
+	Display Issue Date
+	Display Return Date
+	Display BookIssueId
+	Book is issued successfully.
+if choice == 3
+	Display all issued books
