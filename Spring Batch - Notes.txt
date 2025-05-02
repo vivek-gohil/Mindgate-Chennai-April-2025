@@ -1,0 +1,25 @@
+Spring Batch - Notes
+1. Download employees.csv - Done
+2. Create employee_details table - Done
+3. Spring Boot Project - Spring Web, Spring Data JDBC, MySQL, Spring Batch - application.properties - Done
+	a. database properties
+	b. spring batch properties
+4. Create domain class - Employee - Done
+5. Create processor  class - EmployeeItemProcessor implements ItemProcessor<Employee,Employee>
+	a. input as Employee object and output as Employee(Modified) - Done
+6. Create listener class EmployeeJobExecutionListener implements JobExecutionListener - Done
+	a. status == completed
+7. Create configuration class EmployeeBatchConfiguration 
+7.a Create a bean to return FlatFileItemReader -> FlatFileItemReaderBuilder
+7.b Create a bean to return EmployeeItemProcessor object
+7.c Create a bean to return JdbcBatchItemWriter -> JdbcBatchItemWriterBuilder(DataSource)
+7.d Create a bean to return Step -> StepBuilder(JobRepository,DataSourceTransactionManager,
+					FlatFileItemReader,EmployeeItemProcessor,JdbcBatchItemWriter)
+7.e Create a bean to return Job -> JobBuilder(JobRepository,EmployeeJobExecutionListener,Step) 
+8. Create a controller class EmployeeController
+	Job
+	JobLauncher
+	
+	@GetMapping("import") - jobLauncher.run(job,parameters())	
+
+

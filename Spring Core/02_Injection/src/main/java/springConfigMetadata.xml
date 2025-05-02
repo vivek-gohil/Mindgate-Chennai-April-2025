@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+		<bean id="address" class="com.mindgate.main.domain.Address">
+			<property name="addressId" value="1"></property>
+			<property name="block" value="B-212 Shanti Niketan"></property>
+			<property name="street" value="Shubhash Chandra Road"></property>
+			<property name="city" value="Chennai"></property>
+			<property name="pin" value="650001"></property>	
+		</bean>
+
+		<bean id="employee" class="com.mindgate.main.domain.Employee">
+			<property name="employeeId" value="101"></property>
+			<property name="name" value="Test"></property>
+			<property name="salary" value="50000"></property>
+			<property name="residentialAddress" ref="address"></property>
+		</bean>
+
+<!--	<bean id="address" class="com.mindgate.main.domain.Address">-->
+<!--		<constructor-arg name="addressId" value="1"></constructor-arg>-->
+<!--		<constructor-arg name="block" value="B-212 Shanti Niketan"></constructor-arg>-->
+<!--		<constructor-arg name="street" value="Shubhash Chandra Road"></constructor-arg>-->
+<!--		<constructor-arg name="city" value="Chennai"></constructor-arg>-->
+<!--		<constructor-arg name="pin" value="650001"></constructor-arg>-->
+<!--	</bean>-->
+
+<!--	<bean id="employee" class="com.mindgate.main.domain.Employee">-->
+<!--		<constructor-arg name="employeeId" value="101"></constructor-arg>-->
+<!--		<constructor-arg name="name" value="Test"></constructor-arg>-->
+<!--		<constructor-arg name="salary" value="50000"></constructor-arg>-->
+<!--		<constructor-arg name="residentialAddress" ref="address"></constructor-arg>-->
+<!--	</bean>-->
+
+
+
+
+</beans>
+
+
+
+

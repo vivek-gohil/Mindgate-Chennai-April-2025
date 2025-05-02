@@ -9,7 +9,7 @@ public class Address {
 	private long pin;
 
 	public Address() {
-		
+
 		System.out.println("Address defualt constructor");
 	}
 
@@ -29,7 +29,7 @@ public class Address {
 	}
 
 	public void setAddressId(int addressId) {
-		System.out.println("setAddressId() "+ addressId);
+		System.out.println("setAddressId() " + addressId);
 		this.addressId = addressId;
 	}
 
@@ -59,7 +59,7 @@ public class Address {
 	}
 
 	public void setCity(String city) {
-		System.out.println("setCity(): "+ city);
+		System.out.println("setCity(): " + city);
 		this.city = city;
 	}
 
