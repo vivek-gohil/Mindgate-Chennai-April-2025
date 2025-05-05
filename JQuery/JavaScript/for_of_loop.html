@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For of loop</title>
+</head>
+<body>
+    <p id="message"></p>
+    <script>
+        const numbers = [45, 4, 9, 16, 25];
+
+        let txt = "";
+
+        for (let x of numbers) {
+            txt += x + "<br>";
+        }
+
+        document.getElementById("message").innerHTML = txt;
+    </script>
+</body>
+</html>
