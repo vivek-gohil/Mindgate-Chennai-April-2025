@@ -72,7 +72,8 @@ body {
     width: 100%;
     height: 500px;
     padding: 20px;
-    background: #ff1b68;
+    /* background: #ff1b68; */
+    background: url(freedom.jpg);
 }
 
 #product-overview h1 {
