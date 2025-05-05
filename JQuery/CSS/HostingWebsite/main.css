@@ -85,3 +85,52 @@ body {
     color: #2ddf5c;
     text-align: center;
 }
+
+.plan {
+    background: #d5ffdc;
+    text-align: center ;
+    padding: 15px;
+    margin: 8px;
+    display: inline-block;
+    width: 32%;
+}
+
+.plan--highlighted {
+    background: #19b84c;
+    color: white;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__annotation {
+    background: white;
+    color: #2ddf5c;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.plan__features {
+    list-style: none;
+    padding: 0;
+    margin: 0  ;
+}
+
+.plan__features li {
+    padding: 10px 0;
+}
+
+.plan__title {
+    color: #0e4f1f;
+}
+
+.plan__price {
+    color: darkgray;
+}
+
+.plan--highlighted .plan__price {
+    color: #0e4f1f;
+}
+
+.plan--highlighted .plan__title {
+    color: white;
+}
