@@ -3,18 +3,12 @@ package com.mindgate.main.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
 import com.mindgate.main.domain.Employee;
 import com.mindgate.main.service.EmployeeServiceInterface;
 
 @RestController
-@RequestMapping("employeeapi")
+@RequestMapping("employeecrudapi")
 @CrossOrigin("*")
 public class EmployeeCRUDController {
 
@@ -22,31 +16,31 @@ public class EmployeeCRUDController {
 	private EmployeeServiceInterface employeeServiceInterface;
 
 	// http://localhost:8080/employeeapi/employees/101
-	@RequestMapping(value = "employees/{employeeId}", method = RequestMethod.GET)
+	@GetMapping("employees/{employeeId}")
 	public Employee getEmployee(@PathVariable int employeeId) {
 		return employeeServiceInterface.getEmployeeByEmployeeId(employeeId);
 	}
 
 	// http://localhost:8080/employeeapi/employees/101
-	@RequestMapping(value = "employees/{employeeId}", method = RequestMethod.DELETE)
+	@DeleteMapping("employees/{employeeId}")
 	public boolean deleteEmployee(@PathVariable int employeeId) {
 		return employeeServiceInterface.deleteEmployee(employeeId);
 	}
 
 	// http://localhost:8080/employeeapi/employees/employee
-	@RequestMapping(value = "employees/employee", method = RequestMethod.POST)
+	@PostMapping("employees/employee")
 	public boolean addEmployee(@RequestBody Employee employee) {
 		return employeeServiceInterface.addNewEmployee(employee);
 	}
 
 	// http://localhost:8080/employeeapi/employees/employee
-	@RequestMapping(value = "employees/employee", method = RequestMethod.PUT)
+	@PutMapping("employees/employee")
 	public Employee updateEmployee(@RequestBody Employee employee) {
 		return employeeServiceInterface.updateEmployee(employee);
 	}
 
 	// http://localhost:8080/employeeapi/employees
-	@RequestMapping(value = "employees", method = RequestMethod.GET)
+	@GetMapping("employees")
 	public List<Employee> allEmployees() {
 		return employeeServiceInterface.getAllEmployees();
 	}
