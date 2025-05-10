@@ -98,7 +98,7 @@ RENAME TO employees;
 SELECT * FROM employee_details;
 SELECT * FROM employees;
 
--- PRIMARY KEY CONSTRAINT
+-- PRIMARY KEY CONSTRAINTyuhkjb
 DROP TABLE product_details;
 CREATE TABLE product_details (
     product_id NUMBER(5) PRIMARY KEY,
@@ -492,6 +492,24 @@ end;
 /
 
 SELECT * FROM employee_details WHERE employee_id = 5100;
+
+
+ALTER SESSION SET "_ORACLE_SCRIPT"=true;
+  
+CREATE USER group_one IDENTIFIED BY group_one;
+GRANT CONNECT,DBA TO group_one;
+
+CREATE USER group_two IDENTIFIED BY group_two;
+GRANT CONNECT,DBA TO group_two;
+
+CREATE USER group_three IDENTIFIED BY group_three;
+GRANT CONNECT,DBA TO group_three;
+
+CREATE USER group_four IDENTIFIED BY group_four;
+GRANT CONNECT,DBA TO group_four;
+
+CREATE USER group_five IDENTIFIED BY group_five;
+GRANT CONNECT,DBA TO group_five;
 
 
 

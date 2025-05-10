@@ -134,3 +134,38 @@ body {
 .plan--highlighted .plan__title {
     color: white;
 }
+
+#key-features {
+    background: #ff1b68;
+    padding: 16px;
+    margin-top: 30px;
+}
+
+#key-features .section-title {
+    color: white;
+    margin: 10px;
+}
+
+.key-feature__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.key-feature {
+    display: inline-block;
+    padding: 8px 10px;
+    width: 30%;
+    color: white;
+    font-weight: bold;
+}
+
+.key-feature__image {
+    border: 2px solid #424242;
+    height: 120px ;
+    width: 120px;
+    border-radius: 50%;
+    margin: auto;
+    background: #ffcede;
+}
