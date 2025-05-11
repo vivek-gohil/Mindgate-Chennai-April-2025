@@ -16,13 +16,13 @@ public class EmployeeCRUDController {
 	private EmployeeServiceInterface employeeServiceInterface;
 
 	// http://localhost:8080/employeeapi/employees/101
-	@GetMapping("employees/{employeeId}")
+	@GetMapping("employees/employee/{employeeId}")
 	public Employee getEmployee(@PathVariable int employeeId) {
 		return employeeServiceInterface.getEmployeeByEmployeeId(employeeId);
 	}
 
 	// http://localhost:8080/employeeapi/employees/101
-	@DeleteMapping("employees/{employeeId}")
+	@DeleteMapping("employees/employee/{employeeId}")
 	public boolean deleteEmployee(@PathVariable int employeeId) {
 		return employeeServiceInterface.deleteEmployee(employeeId);
 	}
@@ -35,8 +35,13 @@ public class EmployeeCRUDController {
 
 	// http://localhost:8080/employeeapi/employees/employee
 	@PutMapping("employees/employee")
-	public Employee updateEmployee(@RequestBody Employee employee) {
-		return employeeServiceInterface.updateEmployee(employee);
+	public boolean updateEmployee(@RequestBody Employee employee) {
+		Employee e = employeeServiceInterface.updateEmployee(employee);
+		if (e != null) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	// http://localhost:8080/employeeapi/employees
