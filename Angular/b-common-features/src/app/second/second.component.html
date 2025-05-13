@@ -1,0 +1,17 @@
+<p>second works!</p>
+<p *ngFor="let employee of allEmployees">
+    {{employee.name}} - {{employee.employeeId}} - {{employee.salary}}
+</p>
+<table border="1">
+    <tr>
+        <th>EmployeeId</th>
+        <th>Name</th>
+        <th>Salary</th>
+    </tr>
+    <tr *ngFor="let employee of allEmployees">
+        <td>{{employee.employeeId}}</td>
+        <td> {{employee.name}}</td>
+        <td> {{employee.salary}}</td>
+    </tr>
+
+</table>

@@ -1,0 +1,17 @@
+<p>multiplication-table works!</p>
+<label for="number">Enter Number</label>
+<br>
+<input type="number" id="number" [(ngModel)]="numberForTable" />
+<br>
+<br>
+<button (click)="displayTable()">Print Multiplication Table</button>
+<hr>
+<div [hidden]="tableFlag">
+    <table border="1">
+        <tr *ngFor="let i of series">
+            <td>{{numberForTable}}</td>
+            <td>{{i}}</td>
+            <td>{{numberForTable*i}}</td>
+        </tr>
+    </table>
+</div>

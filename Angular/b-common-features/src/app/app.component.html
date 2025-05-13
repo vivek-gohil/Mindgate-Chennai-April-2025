@@ -1,0 +1,16 @@
+<p>This is App Component</p>
+<br>
+<h1>{{name}}</h1> 
+<label for="message">Message :</label>
+<input type="text" id="message" [(ngModel)]="message" />
+<br>
+<br>
+<button (click)="displayMessage()">Click Me</button>
+<br>
+<p [hidden]="isHidden"> {{message}} </p> 
+<br>
+<br>
+<button (click)="showFirstComponent()">Show First</button>     <button (click)="showSecondComponent()">Show Second</button>
+<br>
+<div [hidden]="!displayFirst"> <app-first></app-first> </div>
+<div [hidden]="!displaySecond"> <app-second></app-second></div>

@@ -9,7 +9,7 @@ import com.mindgate.main.service.EmployeeServiceInterface;
 
 @RestController
 @RequestMapping("employeecrudapi")
-@CrossOrigin("*")
+@CrossOrigin("http://localhost:4200")
 public class EmployeeCRUDController {
 
 	@Autowired
@@ -44,7 +44,7 @@ public class EmployeeCRUDController {
 		}
 	}
 
-	// http://localhost:8080/employeeapi/employees
+	// http://localhost:8080/employeecrudapi/employees
 	@GetMapping("employees")
 	public List<Employee> allEmployees() {
 		return employeeServiceInterface.getAllEmployees();
