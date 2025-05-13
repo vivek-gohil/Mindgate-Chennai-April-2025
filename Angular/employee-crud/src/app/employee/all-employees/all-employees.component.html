@@ -12,6 +12,6 @@
         <td>{{employee.salary}}</td>
         <td><button class="button" (click)="deleteEmployee(employee.employeeId)">Delete</button></td>
         <td><button class="button" (click)="updateEmployee(employee.employeeId)">Update</button></td>
-        <td><button class="button">Details</button></td>
+        <td><button class="button" (click)="employeeDetails(employee.employeeId)">Details</button></td>
     </tr>
 </table>

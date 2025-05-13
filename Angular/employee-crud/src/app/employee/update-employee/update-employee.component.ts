@@ -43,6 +43,7 @@ export class UpdateEmployeeComponent implements OnInit {
     this.employeeId = this.activatedRoute.snapshot.params['employeeId'];
     console.log('Employee ID:', this.employeeId);
   }
+  
   ngOnInit(): void {
    this.setEmployeeId();
     this.employeeCrudService.getEmployeeById(this.employeeId).subscribe({
