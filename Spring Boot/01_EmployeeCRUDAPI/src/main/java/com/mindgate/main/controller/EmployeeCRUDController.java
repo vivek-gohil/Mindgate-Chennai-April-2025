@@ -27,7 +27,7 @@ public class EmployeeCRUDController {
 		return employeeServiceInterface.deleteEmployee(employeeId);
 	}
 
-	// http://localhost:8080/employeeapi/employees/employee
+	// http://localhost:8080/employeecrudapi/employees/employee
 	@PostMapping("employees/employee")
 	public boolean addEmployee(@RequestBody Employee employee) {
 		return employeeServiceInterface.addNewEmployee(employee);
